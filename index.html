@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Awesome Book</title>
+</head>
+
+<body>
+    <header class="body-head">
+        <nav class="body-nav">
+            <a class="book-1" href="">Awesome Books</a>
+            <ul class="book-lists">
+                <li class="li"><a class="lala" href="">List</a></li>
+                <li class="li-a"><a class="lala" href="">Add new</a></li>
+                <li class="li-b"><a class="li-li" href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="date">
+        <p class="time"></p>
+    </div>
+    <section class="main-container">
+        <div class="cont-se">
+            <h1 class="heading">All Awesome Books</h1>
+            <div class="books"></div>
+        </div>
+        <div class="added-book container hide">
+            <form class="form">
+                <h3>Add a new book</h3>
+                <input type="text" name="title" placeholder="Title" id="title" required />
+                <input type="text" name="author" placeholder="Author" id="author" required />
+                <input type="submit" value="Add" id="add-btn" />
+            </form>
+        </div>
+    </section>
+    <section class="contact-section hide">
+        <h2 class="contact-h">Contact Information</h2>
+        <p class="contact-p">Do have any question or just want to say "hello"? <br>
+          You can reach out us!
+        </p>
+        <ul class="contact-ul">
+            <li>Our e-mail: mail@mail.com</li>
+            <li>Our Phone number: 0043586534422</li>
+            <li>Our address: Streetname22, 84503 City, Country</li>
+        </ul>
+    </section>
+    <footer>
+      <p class="copy">Copyright</p>
+    </footer>
+
+    <script type="module" src="./index.js"></script>
+    <script type="module" src="/modules/date.js"></script>
+    <script type="module" src="/modules/class.js"></script>
+    <script type="module" src="/modules/navlinks.js"></script>
+</body>
+
+</html>
