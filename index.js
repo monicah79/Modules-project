@@ -6,7 +6,6 @@ let booksList = JSON.parse(localStorage.getItem('book')) || [];
 
 const books = document.querySelector('.books');
 
-//  get books from localStorage
 const getBooks = () => {
   const storageData = localStorage.getItem('books');
   if (storageData === undefined || storageData === null) {
@@ -26,7 +25,6 @@ const getBooks = () => {
     .join('');
 };
 
-// function to remove book from books collections
 window.removeBook = (id) => {
   if (id === null) return;
   const newBooks = booksList.filter((book) => book.id !== id);
@@ -34,16 +32,15 @@ window.removeBook = (id) => {
   getBooks();
 };
 
-// to add book from books collection
 const booksForm = document.querySelector('.form');
 booksForm.addEventListener('submit', (event) => {
   event.preventDefault();
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
-  const id = Math.floor(Math.random() * 10000); // Asign random Id for each
-  const item = new Book(id, title, author); // Add book for the class Book
+  const id = Math.floor(Math.random() * 10000);
+  const item = new Book(id, title, author);
   booksList = [...booksList, item];
-  localStorage.setItem('books', JSON.stringify(booksList)); // Add the new bookList to the local storage
+  localStorage.setItem('books', JSON.stringify(booksList));
   document.getElementById('title').value = '';
   document.getElementById('author').value = '';
   getBooks();
@@ -56,10 +53,6 @@ window.addEventListener('load', () => {
 
 const liA = document.querySelector('.li-a');
 const lb = document.querySelector('.li-b');
-//   const contact = document.querySelector('.contact-section');
-//   const container = document.querySelector('.container');
-//   const can = document.querySelector('.cont-se');
-//   const date = document.querySelector('.time');
 
 liA.addEventListener('click', (e) => {
   e.preventDefault();
